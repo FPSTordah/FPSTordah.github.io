@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Mohr's Website - Under Construction</title>
+
+  <style>
+    html {
+      --img-shadows: var(--orange) 0 0 10px;
+      /* --Theme Colors -- */
+      --dark-color: rgb(39, 39, 39);
+      --grey-scale: rgb(116, 116, 116);
+      --orange: rgb(255, 104, 47);
+      --yellow: rgb(255, 228, 0);
+      --purple: rgb(128, 0, 128);
+    }
+
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: var(--dark-color);
+      color: var(--grey-scale);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: var(--yellow);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      opacity: 0;
+      transform: scale(0.5) rotate(10deg);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      background-color: var(--dark-color);
+      padding: 2rem;
+      border: 1px solid var(--grey-scale);
+      box-shadow: var(--img-shadows);
+    }
+
+    .joke {
+      font-style: italic;
+      margin-bottom: 2rem;
+      color: var(--orange);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chris Mohr's Website - Under Construction</h1>
+    <p>This website is currently under construction, but it will be worth the wait!</p>
+    <p>In the meantime, enjoy this tech joke:</p>
+    <div class="joke">
+      Why did the programmer quit his job? Because he didn't get arrays.
+    </div>
+    <p>Check back soon for updates!</p>
+  </div>
+</body>
+</html>
