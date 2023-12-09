@@ -1,0 +1,638 @@
+/* reset the document styles */
+html body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    max-width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Set Header font */
+h1, h2, h3 {
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Setup the background Video*/
+.videoControlParent {
+    display: flex;
+}
+
+.videoControl {
+    display: flex;
+    flex: auto;
+    vertical-align: top;
+    justify-content: center;
+}
+
+#bg-video {
+    height: 100%;
+    z-index: -42;
+    position: fixed;
+    object-fit: cover;
+}
+
+/* Setting up Navbar */
+/* style the nav bar */
+nav {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: #000;
+    position: fixed;
+    z-index: 42;
+    box-shadow: 0px 0px 15px rgba(79, 149, 218,.4);
+}
+
+/* hide the base ul styles */
+nav ul {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    list-style: none;
+    background-color: black;
+    padding: 0;
+    margin: 50px 0 0 0;
+}
+
+/* style the menu item */
+nav li {
+    border-bottom: none;
+    line-height: 50px;
+    font-size: 1.4em;
+    text-align: center;
+
+}
+
+/* first level of the menu */
+nav > ul > li {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+
+}
+
+/* set the base styles for the hyperlink */
+nav a {
+    text-decoration: none;
+    color: rgba(79, 149, 218,1);
+    display: block;
+}
+
+/* set the hover state with a background color */
+nav a:hover {
+    display: block;
+    background-color: rgba(79, 149, 218,.5);
+    color: white;
+}
+
+/* hide the checkbox */
+#mobile-menu-trigger { display: none; }
+
+/* style the hamburger */
+nav label {
+    display: flex;
+    color: #fff;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+nav > ul { display: none; }
+
+nav input:checked ~ ul {
+    display: block;
+}
+
+.branding {
+    display: flex;
+    margin-left: 20px;
+    line-height: 50px;
+    width: 170px;
+    text-align: center;
+    background-image: linear-gradient( rgba(255,255,255,1), rgba(79, 149, 218,1) 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    justify-content: left;
+}
+
+/* Begin Hero section setup */
+.heroSection {
+    background-image: url("../images/hero.jpg");
+    background-position: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+
+}
+
+.heroContainer {
+    margin: 0;
+    width: 80vw;
+    display: block;
+}
+
+/* Hero Title styles */
+#heroGradient {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient( rgba(0,0,0,.2), rgba(0,0,0,1) 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    padding: 0 10px;
+    background-image: linear-gradient( rgb(255,255,255) 0%, rgba(79, 149, 218,.4) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroButton {
+    display: block;
+    width: 180px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.btn {
+    display: flex;
+    width: 180px;
+    height: 60px;
+    background: rgba(79, 149, 218,.15);
+    border: 1px solid #91C9FF;
+    outline: none;
+    margin: 0 auto;
+    position: absolute;
+    line-height: 60px;
+
+}
+
+#buttonInitial {
+    width: 180px;
+    position: absolute;
+    text-align: center;
+}
+
+/* Hover hero button */
+.btn:hover {
+    transition: 0.5s ease;
+    background: rgb(79, 149, 218);
+    box-shadow: 0 0 10px rgba(79, 149, 218,1);
+}
+
+#buttonHover {
+    width: 180px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+}
+
+#buttonHover, #buttonInitial {
+    transition: opacity 0.5s linear ;
+}
+
+.heroButton:hover #buttonInitial {
+    opacity: 0;
+}
+
+.heroButton:hover #buttonHover {
+    opacity: 1;
+}
+
+.btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/* Setting up the Aboutme Section */
+.aboutSection {
+    width: 100%;
+    background-color: rgba(0,0,0,1);
+    margin: 0;
+    text-align: center;
+    color: white;
+    padding: 0 0 50px 0;
+}
+
+.bg-color {
+
+    background-image: linear-gradient( rgba(79, 149, 218,.1), rgba(79, 149, 218,1) 60%, rgba(0,0,0,1) 100%);
+    width: 100%;
+    padding-top: 80px;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.aboutSection h3 {
+    display: block;
+    margin-top: 0;
+}
+
+.aboutSection p {
+    margin: 60px 0;
+}
+
+.aboutSection img {
+    display: block;
+    width: 90vw;
+    margin: 0 -6%;
+    box-shadow: 0 0 40px black;
+}
+
+/* Setting up the SalesSection Section */
+.salesSection {
+    width: 100%;
+    margin-top: -3px;
+    background-color: black;
+    text-align: center;
+    color: rgba(163, 239, 234, 1);
+    padding: 50px 0 80px 0;
+}
+
+.salesContainer {
+    margin-bottom: 50px;
+}
+
+.salesSection img {
+    display: block;
+    width: 90vw;
+    margin-left: -20px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 5px white;
+}
+
+.costAndName {
+    text-align: center;
+}
+
+.costAndName p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Setting up the footer Section */
+.footSection {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 50px 0 10px 0;
+}
+
+.newsForm {
+    margin-bottom: 100px;
+}
+
+#newsEmail {
+    width: 70vw;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#newsSubmit{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(79, 149, 218,.8);
+    color: white;
+}
+
+/* Setting up the Contact Cards */
+.contactSVG {
+    fill: white;
+    font-size: 3em;
+}
+
+.footSection h1 {
+    color: white;
+    font-size: 1.8em;
+    margin: 50px 0;
+}
+
+.horizantalBar {
+    width: 50px;
+    border: 2px solid darkgrey;
+    display: block;
+    margin: 0 auto;
+}
+
+.footerContainer {
+    display: block;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.footContainer {
+    width: 80vw;
+    background-color: lightgrey;
+    padding: 15px 10px;
+    color: black;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: -10px
+}
+
+/* Setting up the Social Media icons */
+.socialMedia img {
+    width: 40px;
+}
+
+.bg-social {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.5);
+    display: inline-block;
+    margin: 100px auto;
+}
+
+.leftMargin {
+    margin-left: 20px;
+}
+
+.copyright {
+    color: rgba(255,255,255,.6);
+}
+
+.trioSVG svg {
+    font-size: 2em;
+}
+
+/* Tablet style */
+@media (min-width: 768px) {
+    nav label { display: none; } /* hide the hamburger icon */
+    nav > ul { display: block; } /* make the menu a block element */
+
+    /* Navbar Adjustments */
+    nav {
+        width: 100%;
+        height: 50px;
+        background: #000;
+        position: fixed;
+        z-index: 42;
+    }
+
+    nav ul {
+        list-style: none;
+        background-color: black;
+        text-align: right;
+        padding: 0;
+        margin: 0 30px 0 0;
+    }
+
+    nav > ul > li {
+        width: 100px;
+        display: inline-block;
+        border-top: 0 solid #333;
+    }
+
+    .hero h1 {
+        font-size: 5em;
+    }
+
+    .aboutSection img {
+        width: 90vw;
+        margin: 0 -6%;
+    }
+
+    .salesSection {
+        display: flex;
+        padding-bottom: 0;
+    }
+
+    .salesSection img {
+        width: 40vw;
+        display: inline-block;
+    }
+
+    .costAndName {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .picDescrptor {
+        padding-top: 10px;
+        margin-left: 50px;
+    }
+
+    .lastParaSales {
+        margin: 0 auto;
+        width: 40vw;
+        display: block;
+    }
+
+    .salesContainer {
+        display: inline-flex;
+    }
+
+    /* last item in Sales section order Adjustments */
+    .lastSalesDiv {
+        flex-direction: row;
+        margin-left: -25px;
+    }
+
+    #positionSwap {
+        order: 1;
+    }
+
+    #positionSwapImg{
+        order: 2;
+        margin-left: 100px;
+    }
+
+    .footerContainer {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .footContainer {
+        display: inline-block;
+        width: 28vw;
+        background-color: lightgrey;
+        padding: 15px 0;
+        color: black;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-left: 18px
+    }
+
+    #newsEmail {
+        width: 50vw;
+        height: 40px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    #newsSubmit{
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+    }
+}
+
+/* Smaller Laptop Screens */
+@media (min-width: 1024px) {
+    .hero h1 {
+        font-size: 7em;
+    }
+
+    .salesSection img {
+        width: 40vw;
+        display: inline-block;
+    }
+
+    #bg-video {
+        width: 100%;
+    }
+
+    .salesSection p {
+        width: 30vw;
+        display: inline-block;
+    }
+
+    .picDescrptor {
+        padding-top: 60px;
+        margin-left: 100px;
+    }
+
+    .lastParaSales {
+        margin: 0 auto;
+        width: 20vw;
+        display: block;
+    }
+
+    .thirdSales {
+        padding-top: 40px;
+    }
+
+    .aboutSection {
+        margin-top: -2px;
+    }
+}
+
+/* Laptop and Desktop View */
+@media (min-width: 1440px) {
+
+    .container {
+        display: block;
+        margin: 0 auto;
+        width: 70vw;
+    }
+
+    .container img {
+        margin: 0 auto 40px auto;
+    }
+
+    .hero h1 {
+        font-size: 7em;
+    }
+
+    .hero p {
+        font-size: 2em;
+    }
+
+    .aboutSection h3 {
+        font-size: 4.5em;
+    }
+
+    .aboutSection p {
+        font-size: 1.2em;
+    }
+
+    .aboutSection img {
+        width: 60vw;
+    }
+
+    .salesSection img {
+        width: 30vw;
+    }
+
+    .costAndName {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    .thirdSales {
+        padding-top: 60px;
+    }
+
+    .footContainer {
+        width: 20vw;
+        margin-left: 50px;
+    }
+
+    #newsEmail {
+        width: 30vw;
+    }
+}
+
+/* UHD screens */
+@media (min-width: 2560px) {
+    .hero h1 {
+        font-size: 14em;
+    }
+
+    nav {
+        height: 70px;
+    }
+
+    nav ul li {
+        line-height: 70px;
+        font-size: 2em;
+        margin-right: 25px;
+    }
+
+    .branding h1 {
+        font-size: 2.5em;
+        line-height: 70px;
+        margin-left: 25px;
+
+    }
+
+    .branding {
+        width: 270px;
+    }
+
+    .btn {
+        zoom: 150%
+    }
+
+    .picDescrptor {
+        padding-top: 150px;
+        font-size: 1.3em;
+    }
+
+    .thirdSales {
+        padding-top: 150px;
+        font-size: 1.3em;
+    }
+
+    .footContainer {
+        width: 15vw;
+    }
+}

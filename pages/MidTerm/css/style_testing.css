@@ -1,0 +1,84 @@
+/* reset the document styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* style the nav bar */
+nav {
+    width: 100%;
+    background: #000;
+}
+
+/* hide the base ul styles */
+nav ul {
+    list-style: none;
+    background-color: #444;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* style the menu item */
+nav li {
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* first level of the menu */
+nav > ul > li {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+}
+
+/* set the base styles for the hyperlink */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+/* set the hover state with a background color */
+nav a:hover {
+    display: block;
+    background-color: #005f5f;
+}
+
+/* hide the checkbox */
+#mobile-menu-trigger { display: none; }
+
+/* style the hamburger */
+nav label {
+    display: inline-block;
+    color: #fff;
+    background: #a02620;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+nav > ul { display: block; }
+
+nav input:checked ~ ul {
+    display: block;
+}
+
+/* desktop/tablet styles */
+@media only screen and (min-width: 768px) {
+    nav label { display: none; } /* hide the hamburger icon */
+    nav > ul { display: none; } /* make the menu a block element */
+
+    /* set the style of the main menu items */
+    nav > ul > li {
+        width: 150px;
+        display: inline-block;
+        border-top: 0 solid #333;
+    }
+}

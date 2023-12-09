@@ -1,68 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chris Mohr's Website - Under Construction</title>
-
-  <style>
-    html {
-      --img-shadows: var(--orange) 0 0 10px;
-      /* --Theme Colors -- */
-      --dark-color: rgb(39, 39, 39);
-      --grey-scale: rgb(116, 116, 116);
-      --orange: rgb(255, 104, 47);
-      --yellow: rgb(255, 228, 0);
-      --purple: rgb(128, 0, 128);
-    }
-
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      background-color: var(--dark-color);
-      color: var(--grey-scale);
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 2rem;
-      color: var(--yellow);
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      opacity: 0;
-      transform: scale(0.5) rotate(10deg);
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .container {
-      width: 500px;
-      margin: 0 auto;
-      background-color: var(--dark-color);
-      padding: 2rem;
-      border: 1px solid var(--grey-scale);
-      box-shadow: var(--img-shadows);
-    }
-
-    .joke {
-      font-style: italic;
-      margin-bottom: 2rem;
-      color: var(--orange);
-    }
-
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>Chris Mohr E-Portfolio - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <h1>Chris Mohr's Website - Under Construction</h1>
-    <p>This website is currently under construction, but it will be worth the wait!</p>
-    <p>In the meantime, enjoy this tech joke:</p>
-    <div class="joke">
-      Why did the programmer quit his job? Because he didn't get arrays.
+<body data-bs-theme="dark">
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="images/coding_bg.webm" type="video/webm">
+    </video>
+
+    <div class="container d-flex row mx-auto h-100 ">
+        <!-- NavBar -->
+        <div class="container-fluid fixed-top ">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-4 rounded-top-0 ">
+                <div class="container-fluid d-flex no-left-padding h-100">
+                    <div class="branding d-flex">
+                        <a class="navbar-brand active d-flex me-auto " aria-current="page" href="./index.html"><h1 class="fw-bolder align-self-center">Chris Mohr</h1></a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav d-flex ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./resume.html">Resume</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html">About Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+            <!-- Contact Info Sidebar -->
+        <div class="container d-flex flex-lg-row flex-column">
+            <div class="main-content contactInfo rounded-4 p-4 col-10 col-md-7 col-lg-4 col-xxl-3 me-lg-3 flex-column text-center order-2 mx-auto">
+                <img src="./images/Self.jpg" class="col" alt="Self image" id="selfie">
+                <h3 class="h2 mt-3 col">Chris Mohr</h3>
+                <p class="col mt-3">Victoria BC, Canada</p>
+                <div class="container-fluid d-flex mt-5 align-items-end h-25">
+                    <a href="https://www.linkedin.com/in/chris-mohr-5626452a0" target="_blank" class="align-self-end col">
+                        <img src="./images/linkedin-svgrepo-com.svg" alt="Linkedin Icon" class="linkIcon rounded-circle">
+                    </a>
+                    <a href="https://github.com/FPSTordah?tab=repositories" target="_blank" class="align-self-end col">
+                        <img src="./images/github-mark-white.svg" alt="GitHub Icon" class="linkIcon rounded-circle opacity-85">
+                    </a>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content container rounded-4 p-3 d-flex order-lg-2 order-1 col-12 col-md mh-75" id="main">
+                <div class="container-fluid">
+                    <div class="container row d-flex">
+                        <h1 class="display-4 col fw-semibold d-flex">I am Chris Mohr</h1>
+                    </div>
+                    <div class="mt-5 d-flex flex-column typewriter type1">
+                        <p>document.write("I'm a Student");</p> <!--Javascipt-->
+                    </div>
+                    <div class="mt-4 d-flex flex-column typewriter type2">
+                        <p>std::cout &gt;&gt; "I'm a Motorcycle enhusiast\n";</p> <!-- C++ -->
+                    </div>
+                    <div class="mt-4 d-flex flex-column typewriter type3">
+                        <p>System.out.println("I'm a Java Learner");</p> <!--Java-->
+                    </div>
+                    <div class="mt-4 d-flex flex-column typewriter type4">
+                        <p>print!("I'm a Rust Learner");</p> <!--Rust-->
+                    </div>
+                    <div class="mt-4 d-flex flex-column typewriter type5">
+                        <p>&lt;p&gt;I'm an aspiring Web Developer&lt;/p&gt;</p> <!--HTML-->
+                    </div>
+                    <div class="mt-4 d-flex flex-column typewriter type6">
+                        <p>Console.WriteLine("I'm a Canadian ");</p> <!--C#-->
+                    </div>
+                    <div class="mt-4 d-flex flex-column typewriter type7">
+                        <p>print *, "I'm an avid Gamer"</p> <!--Assembly-->
+                    </div>
+                    <div class="mt-4 d-flex flex-column typewriter type8">
+                        <p>hello db 'I'm a relentless Challenger to myself', 0</p> <!--Fortran-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid row d-flex order-last mt-5">
+            <div class="d-flex align-items-end copyright">
+                <p class="col text-center">&copy; Chris Mohr 2023</p>
+            </div>
+        </footer>
     </div>
-    <p>Check back soon for updates!</p>
-  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

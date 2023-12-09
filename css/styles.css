@@ -1,0 +1,583 @@
+:root {
+    --bs-bg-opacity: .4;
+    --extra-margin: 7rem;
+    --cs-gutter-x: 0;
+    --img-shadows: var(--orange) 0 0 10px;
+    /* --Theme Colors -- */
+    --dark-color: rgb(39, 39, 39);
+    --grey-scale: rgb(116, 116, 116);
+    --orange: rgb(255, 104, 47);
+    --yellow: rgb(255, 228, 0);
+    --purple: rgb(128, 0, 128);
+}
+
+/* Fonts
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+html, body {
+    height:100%;
+    width:100%;
+    margin: 0;
+
+}
+
+h1, h2, h3,h4,h5 {
+    font-family: 'Playfair Display', serif!important;
+}
+
+p, li{
+    font-family: 'Poppins', sans-serif;
+}
+
+.mt-6 {
+    margin-top: var(--extra-margin)!important;
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -42;
+    opacity: 0.05;
+}
+
+.active-page {
+    border-top: 1px solid var(--orange);
+    border-left: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
+    border-radius: 30px 30px;
+}
+
+.main-content {
+    --grey-scale: rgba(116, 116, 116,.2) ;
+    border: rgba(156, 61, 25, .7) solid 2px;
+    background-color: var(--grey-scale);
+    margin-top: var(--extra-margin);
+    padding: 20px;
+}
+
+.btn-cs-dark {
+    background-color: var(--dark-color)!important;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.btn-cs-dark:hover {
+    background-color: var(--dark-color)!important;
+    box-shadow: 0 0 5px aqua;
+}
+
+/* NavBar */
+.navbar {
+    --orange: rgba(255, 104, 47,.6);
+    border-color: var(--orange);
+    border-style: none ridge solid ridge;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li:hover  {
+    color: rgba(0, 223, 223, .8);
+    background-color: #666666;
+    text-shadow: 1px 4px 4px #555;
+    -webkit-background-clip: text;
+}
+
+.navbar-nav li{
+    background-color: rgba(0, 223, 223, .5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    --bs-nav-link-color: transparent!important;
+    text-shadow: var(--orange) 0 0;
+}
+.branding {
+    border-right: 1px solid var(--orange);
+    box-shadow: 7px 0 20px var(--orange);
+    background-color: var(--dark-color);
+    border-radius: 0 50px 50px 0;
+    height: 100%!important;
+    width: 240px;
+    padding: 0 1em 0;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s ;
+}
+
+.branding:hover {
+    width: 275px;
+}
+
+.no-left-padding {
+    padding-left: 0!important;
+
+}
+
+.branding h1{
+    color: rgba(0, 223, 223, .8);
+}
+
+.navbar-brand {
+    font-size: 2.25rem!important;
+
+}
+
+ /* Contact Box on left */
+.contactInfo {
+    max-height: 550px;
+}
+
+#selfie {
+    width: 10rem;
+    border-radius: 50%;
+    box-shadow: var(--img-shadows);
+}
+
+.linkIcon {
+    width:50px;
+    height: 50px;
+    box-shadow: var(--img-shadows);
+}
+
+/* Main Page */
+/* -- Typewriter Effect -- */
+/* Taken from: https://css-tricks.com/snippets/css/typewriter-effect/ */
+/* The nowrap insures the div stays on one line, the overflow hides anything that
+ the animation has not exposes. the animation is a 5s timer that takes 40 steps
+ to complete it's cycle. the steps to take give it the effect of being typed.
+ Too quickly and it looks like the letters just flow out instead of being typed and
+ too slow the animation looks like it's lagging. the infinite is telling the
+ cursor to never end and will keep going.
+
+ Due to the different lengths of the <p>, it was just easiest to create a different
+ class for each and change the width the keyframes would go. If I used 100%
+ it would go across the entire screen and doing a width on the class to limit it
+ won't work either.*/
+
+.project-title {
+    font-size: 3.5vw;
+}
+
+.typewriter p {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto 0 0; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .2em; /* Adjust as needed */
+
+}
+
+.type1 p {
+    visibility: hidden;
+    animation: typing1 5s steps(40, end) .75 forwards,
+    blink-caret .75s step-end infinite;
+}
+
+.type2 p {
+    visibility: hidden;
+    animation: typing2 5s steps(40, end) 0.5s forwards,
+    blink-caret .75s step-end infinite;
+}
+
+.type3 p {
+    visibility: hidden;
+    animation: typing3 5s steps(40, end) 1.6s forwards,
+    blink-caret .75s step-end infinite;
+}
+
+.type4 p {
+    visibility: hidden;
+    animation: typing4 5s steps(40, end) 1.25s forwards,
+    blink-caret .75s step-end infinite;
+}
+
+.type5 p {
+    visibility: hidden;
+    animation: typing5 5s steps(40, end) 1s forwards,
+    blink-caret .75s step-end infinite;
+}
+
+.type6 p {
+    visibility: hidden;
+    animation: typing6 5s steps(40, end) 1s forwards,
+    blink-caret .75s step-end infinite;
+}
+
+.type7 p {
+    visibility: hidden;
+    animation: typing7 5s steps(40, end) 1.5s forwards,
+    blink-caret .75s step-end infinite;
+}
+
+.type8 p {
+    visibility: hidden;
+    animation: typing8 5s steps(40, end) 0.75s forwards,
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+/* Cursor starts at the 0 position, in this case left margin.
+ Then each frame exposes a character as it moves to the right.*/
+@keyframes typing1 {
+    from {
+        visibility: visible; /* Make the element visible at the start of the animation */
+        width: 0;
+    }
+    to {
+        width: 30em;
+        visibility: visible; /* Keeps the element visible at the end of the animation */
+    }
+}
+
+@keyframes typing2 {
+    from {
+        visibility: visible;
+        width: 0;
+    }
+    to {
+        width: 30em;
+        visibility: visible;
+    }
+}
+
+@keyframes typing3 {
+    from {
+        visibility: visible;
+        width: 0;
+    }
+    to {
+        width: 28em;
+        visibility: visible;
+    }
+}
+
+@keyframes typing4 {
+    from {
+        visibility: visible;
+        width: 0;
+    }
+    to {
+        width: 19em;
+        visibility: visible;
+    }
+}
+
+@keyframes typing5 {
+    from {
+        visibility: visible;
+        width: 0;
+    }
+
+    to {
+        width: 26.5em;
+        visibility: visible;
+    }
+}
+
+@keyframes typing6 {
+    from {
+        visibility: visible;
+        width: 0;
+    }
+    to {
+        width: 26em;
+        visibility: visible;
+    }
+}
+
+@keyframes typing7 {
+    from {
+        visibility: visible;
+        width: 0;
+    }
+    to {
+        width: 19em;
+        visibility: visible;
+    }
+}
+
+@keyframes typing8 {
+    from {
+        visibility: visible;
+        width: 0;
+    }
+    to {
+        width: 34em;
+        visibility: visible;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+.navbar li {
+    font-size: 1.2rem;
+}
+
+.contactInfo {
+    min-height: 480px!important;
+}
+
+.opacity-85 {
+    opacity: 85%;
+}
+
+/* Resume Page */
+.resume-sidebar {
+    --orange: rgba(156, 61, 25, 1);
+    background-color: var(--orange);
+}
+
+.resume-header {
+    font-size: 4.5rem;
+}
+
+.progress-bar {
+    background-color: var(--dark-color);
+    border-right: 1px solid rgba(0, 223, 223, .4);
+    overflow: visible;
+    height: 100%;
+    color: rgb(0, 223, 223);
+
+}
+
+.progress {
+    --bs-progress-bg: rgb(58, 58, 58);
+    border: 1px solid rgba(0, 223, 223, .4);
+    height: 25px;
+
+}
+
+/* Projects Page */
+.rust {
+    width: 10rem;
+}
+
+.project-info {
+    background: var(--dark-color);
+    box-shadow: 7px 0 20px 0 var(--dark-color);
+    z-index: 2;
+    border-radius: 1em 0 0 1em;
+    height: 350px;
+}
+
+.project-image {
+    background-color: rgba(255, 104, 47,.5);
+    border-radius: 0 1em 1em 0;
+    height: 350px;
+}
+
+.project-info-right {
+    background: var(--dark-color);
+    box-shadow: -7px 0 20px 0 var(--dark-color);
+    border-radius: 0 1em 1em 0;
+    height: 350px;
+}
+
+.project-image-left {
+    background-color: rgba(255, 104, 47,.5);
+    border-radius: 1em 0 0 1em;
+    height: 350px;
+}
+
+/* Footer */
+.copyrightNotation {
+    font-size: .7rem;
+}
+/*Had to add in a UHD resolution, the website looked wrong and a bit small on
+such a large screen.*/
+@media only screen and (min-width: 1441px) {
+    #bg-video {
+        transform: translate(0%,0%);
+    }
+
+    .navbar {
+        height: 100px;
+    }
+
+    .project-title {
+        font-size: 2vw;
+    }
+
+    .typewriter p {
+        font-size: 1vw;
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    #bg-video {
+        transform: translate(30%,0%);
+    }
+
+    .typewriter p {
+        font-size: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 4.5vw;
+    }
+
+    .main-content {
+        margin-bottom: 50px!important;
+        padding: 20px;
+    }
+    .branding {
+        width: 235px;
+    }
+
+    .branding:hover {
+        width: 255px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    #bg-video {
+        transform: translate(30%,-0%);
+    }
+
+    .typewriter p {
+        font-size: 1.5vw;
+    }
+
+    .project-title {
+        font-size: 4vw;
+    }
+
+    .project-info, .project-info-right  {
+        box-shadow: 0 -7px 20px 0 var(--dark-color);
+        border-radius: 0 0 1em 1em;
+    }
+
+    .project-image, .project-image-left {
+        border-radius: 1em 1em 0 0;
+    }
+
+    .progress {
+        height: 20px;
+    }
+
+    .resume-header {
+        font-size: 2.8rem;
+    }
+    .branding {
+        width: 225px;
+    }
+
+    .branding:hover {
+        width: 245px;
+    }
+}
+
+@media only screen and (max-width: 912px) {
+    .contactInfo {
+        height: 550px;
+    }
+
+    .project-title {
+        font-size: 5.5vw;
+    }
+
+    .navbar-nav li:nth-child(1) {
+        margin-top: 15px;
+    }
+
+    .active-page {
+        border-bottom: 1px solid var(--orange);
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-radius: 0 0 0 15px;
+    }
+
+    .active-page-last {
+        border-top: 1px solid var(--orange);
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        border-radius: 15px 0 0 0;
+    }
+
+    .nav-link {
+        padding-left: 15px;
+    }
+
+    .navbar {
+        --orange: rgba(255, 104, 47,.6);
+        border-left: 2px solid var(--orange);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #bg-video {
+        transform: translate(0%,-0%);
+    }
+
+    .typewriter p {
+        font-size: 2.2vw;
+    }
+
+    .resume-header {
+        font-size: 3rem;
+    }
+
+    .contactInfo {
+        margin-bottom: 50px;
+    }
+
+    .branding {
+        width: 205px;
+    }
+
+    .branding:hover {
+        width: 225px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    #bg-video {
+        transform: translate(50%,-0%);
+
+    }
+
+    .resume-header {
+        margin-top: 1.5rem;
+        font-size: 2.6rem;
+    }
+
+    .btn {
+        font-size: .8rem;
+    }
+
+    .project-info, .project-image, .project-info-right, .project-image-left {
+        padding: 1.3em!important;
+    }
+
+    .progress {
+        height: 25px;
+    }
+
+    .branding {
+        width: 180px;
+    }
+
+    .branding:hover {
+        width: 210px;
+    }
+}

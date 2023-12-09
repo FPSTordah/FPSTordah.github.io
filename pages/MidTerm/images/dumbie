@@ -1,0 +1,762 @@
+<html lang="en">
+    <head>
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Suzuki Fake</title>
+
+        <style>
+
+        /* reset the document styles */
+        html body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+
+        }
+
+
+        #bg-video {
+            width: 100vw;
+            z-index: -42;
+            position: fixed;
+            right: -200%;
+            object-fit: cover;
+
+        }
+
+        /* style the nav bar */
+        nav {
+            width: 100vW;
+            height: 50px;
+            background: #000;
+            position: fixed;
+            z-index: 42;
+        }
+
+        /* hide the base ul styles */
+        nav ul {
+            list-style: none;
+            background-color: black;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* style the menu item */
+        nav li {
+            border-bottom: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* first level of the menu */
+        nav > ul > li {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            border-top: 1px solid #333;
+            text-align: center;
+        }
+
+        /* set the base styles for the hyperlink */
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+        }
+
+        /* set the hover state with a background color */
+        nav a:hover {
+            display: block;
+            background-color: #lightblue;
+        }
+
+        /* hide the checkbox */
+        #mobile-menu-trigger { display: none; }
+
+        /* style the hamburger */
+        nav label {
+            display: inline-block;
+            color: #fff;
+            font-style: normal;
+            font-size: 1.2em;
+            padding: 10px;
+            float: right;
+            margin-right: 10px;
+        }
+
+        nav > ul { display: none; }
+
+        nav input:checked ~ ul {
+            display: block;
+        }
+
+        .branding {
+            margin-left: 30px;
+            line-height: 50px;
+            display: inline-block;
+            color: lightblue;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .heroSection {
+            background-image: url("../images/hero.jpg");
+            background-position: 30%;
+            backdrop-filter: drop-shadow(4px 4px 10px blue);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+
+        }
+
+        .heroContainer {
+            /*width: 90vw;*/
+            margin: 0;
+            width: 80vw;
+            display: block;
+        }
+
+        #heroGradient {
+            height: 100vh;
+            width: 100vw;
+            background-image: linear-gradient( rgba(0,0,0,.2), rgba(0,0,0,1) 90%, rgba(0,0,0,.8) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero {
+            margin-bottom: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.3em;
+        }
+
+        .heroButton {
+            display: block;
+            width: 180px;
+            height: 60px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            width: 180px;
+            height: 60px;
+            background: rgba(79, 149, 218,.15);
+            border: 1px solid #91C9FF;
+            outline: none;
+            margin: 0 auto;
+        }
+
+        .btn:hover {
+            transition: 1s ease;
+            background: rgb(79, 149, 218);
+        }
+
+        .btn span {
+            color: white;
+            font-size: 18px;
+            font-weight: 100;
+        }
+
+        .aboutSection {
+            width: 100vw;
+            background-image: linear-gradient( rgba(0,0,0,.9), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);
+            margin: 0;
+            text-align: center;
+            color: rgba(163, 239, 234, 1);
+            padding: 0 0 50px 0;
+        }
+
+        .bg-color {
+            background-color: black;
+            width: 100vw;
+            padding-top: 80px;
+        }
+
+        .container {
+            display: block;
+            margin: 0 auto;
+            width: 80vw;
+        }
+
+        .aboutSection h3 {
+            display: block;
+            margin-top: 0;
+        }
+
+        .aboutSection p {
+            margin: 60px 0;
+        }
+
+        .aboutSection img {
+            display: block;
+            width: 95vw;
+            margin-left: -40px;
+        }
+
+        .salesSection {
+            width: 100vw;
+            background-color: black;
+            margin: 0;
+            text-align: center;
+            color: rgba(163, 239, 234, 1);
+            padding: 50px 0 80px 0;
+        }
+
+        .salesSection p {
+            margin-bottom: 50px;
+        }
+
+        .salesSection img {
+            display: block;
+            width: 90vw;
+            margin-left: -20px;
+            margin-bottom: 25px;
+        }
+
+        .costAndName {
+            text-align: center;
+        }
+
+        .costAndName p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .footSection {
+            width: 100vw;
+            margin: 0;
+            text-align: center;
+            padding: 50px 0 10px 0;
+        }
+
+        .newsForm {
+            margin-bottom: 100px;
+        }
+
+        #newsEmail {
+            width: 70vw;
+            height: 40px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        #newsSubmit{
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .contactSVG {
+            fill: white;
+            font-size: 3em;
+        }
+
+        .footSection h1 {
+            color: white;
+            font-size: 1.8em;
+            margin: 50px 0;
+        }
+
+        .horizantalBar {
+            width: 50px;
+            border: 2px solid darkgrey;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .footerContainer {
+            display: block;
+            margin: 0 auto;
+            width: 80vw;
+        }
+
+        .footContainer {
+            width: 80vw;
+            background-color: lightgrey;
+            padding: 15px 10px;
+            color: black;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-left: -10px
+        }
+
+        .socialMedia img {
+            width: 40px;
+        }
+
+        .bg-social {
+            padding: 10px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,.5);
+            display: inline-block;
+            margin: 100px auto;
+        }
+
+        .leftMargin {
+            margin-left: 20px;
+        }
+
+        .copyright {
+            color: rgba(255,255,255,.6);
+        }
+
+        .trioSVG svg {
+            font-size: 2em;
+        }
+
+        /* tablet styles */
+        @media (min-width: 426px) {
+            nav label { display: none; } /* hide the hamburger icon */
+            nav > ul { display: block; } /* make the menu a block element */
+
+            nav {
+                width: 100%;
+                height: 50px;
+                background: #000;
+                position: fixed;
+                z-index: 42;
+            }
+
+            nav ul {
+                list-style: none;
+                background-color: black;
+                text-align: right;
+                padding: 0;
+                margin: 0 30px 0 0;
+            }
+
+            nav > ul > li {
+                width: 100px;
+                display: inline-block;
+                border-top: 0 solid #333;
+            }
+
+            .hero h1 {
+                font-size: 5em;
+            }
+
+            .branding {
+                float: left;
+            }
+
+            .aboutSection img {
+                width: 90vw;
+            }
+
+            .salesSection {
+                display: flex;
+            }
+
+            .salesSection img {
+                width: 40vw;
+                display: inline-block;
+            }
+
+            .costAndName {
+                display: block;
+                margin-bottom: 25px;
+            }
+
+            .thirdSales {
+
+            }
+
+            .picDescrptor {
+                padding-top: 10px;
+                margin-left: 50px;
+            }
+
+            .lastParaSales {
+                margin: 0 auto;
+                width: 40vw;
+                display: block;
+            }
+
+            .salesContainer {
+                display: inline-flex;
+            }
+
+            .lastSalesDiv {
+                flex-direction: row;
+                margin-left: -25px;
+            }
+
+            #positionSwap {
+                order: 1;
+            }
+
+            #positionSwapImg{
+                order: 2;
+                margin-left: 100px;
+            }
+
+            .footerContainer {
+                display: block;
+                margin: 0 auto;
+                width: 100vw;
+            }
+
+            .footContainer {
+                display: inline-block;
+                width: 28vw;
+                background-color: lightgrey;
+                padding: 15px 0;
+                color: black;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                text-align: center;
+                margin-left: 18px
+            }
+
+            #newsEmail {
+                width: 50vw;
+                height: 40px;
+                margin-bottom: 5px;
+                border-radius: 5px;
+            }
+
+            #newsSubmit{
+                width: 150px;
+                height: 40px;
+                border-radius: 5px;
+            }
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+
+            .branding {
+                margin-left: 20px;
+            }
+
+            #bg-video {
+                top: -113%;
+                zoom: 160%
+            }
+
+            .branding {
+                margin-left: 150px;
+            }
+
+            .salesSection img {
+                width: 40vw;
+                display: inline-block;
+            }
+
+            .salesSection p {
+                width: 30vw;
+                display: inline-block;
+            }
+
+            .picDescrptor {
+                margin-left: 30px;
+                padding-top: 150px;
+            }
+
+            #positionSwap {
+                margin-left: 25px;
+                padding-top: 40px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+
+            .container {
+                display: block;
+                margin: 0 auto;
+                width: 70vw;
+            }
+
+            .branding {
+                margin-left: 20px;
+            }
+
+            .container img {
+                margin: 0 auto 40px auto;
+            }
+
+            .hero h1 {
+                font-size: 7em;
+            }
+
+            .hero p {
+                font-size: 2em;
+            }
+
+            .aboutSection h3 {
+                font-size: 4.5em;
+            }
+
+            .aboutSection p {
+                font-size: 1.2em;
+            }
+
+            .aboutSection img {
+                margin-bottom: 100px;
+                width: 60vw;
+            }
+
+            .salesSection {
+                display: flex;
+            }
+
+            .salesSection img {
+                width: 30vw;
+                display: inline-block;
+            }
+
+            .costAndName {
+                display: block;
+                margin-bottom: 50px;
+            }
+
+            .picDescrptor {
+                padding-top: 150px;
+                margin-left: 100px;
+            }
+
+            .lastParaSales {
+                margin: 0 auto;
+                width: 20vw;
+                display: block;
+            }
+
+            .salesContainer {
+                display: inline-flex;
+            }
+
+            .lastSalesDiv {
+                flex-direction: row;
+            }
+
+            #positionSwap {
+                order: 1;
+                padding-top: 150px;
+            }
+
+            #positionSwapImg {
+                order: 2;
+                margin-left: 100px;
+            }
+
+            .footContainer {
+                width: 25vw;
+                margin-left: 50px;
+            }
+
+            #newsEmail {
+                width: 30vw;
+            }
+
+            #bg-video {
+                zoom: 100%;
+                height: 100vh;
+                top: -50%;
+                right: 50%;
+                transform: translate(50%, 50%);
+            }
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="videoControl">
+            <video autoplay muted loop id="bg-video">
+                <source src="images/bg_video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <main>
+            <nav>
+                <div class="branding">
+                    <h1>Suzuki GSX-R</h1>
+                </div>
+            <label for="mobile-menu-trigger">&#9776;</label>
+              <input type="checkbox" id="mobile-menu-trigger">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <section class="heroSection sectionHeight">
+                <div id="heroGradient">
+                    <div class="heroContainer">
+                        <div class="hero">
+                            <h1>Suzuki GSX-R</h1>
+                            <p>Ride the Legend: Suzuki Motorcycles, Where Dreams Take the Road.</p>
+                        </div>
+                         <div class="heroButton">
+                            <!-- <button type="button">Let's Move</button> -->
+                            <button class="btn">
+                                <span>Let's Go!</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="aboutSection">
+                <div class="bg-color">
+                    <div class="container">
+                        <div>
+                            <h3>
+                                Feel the speed
+                            </h3>
+                        </div>
+                        <div>
+                            <p>
+                                Suzuki motorcycles are a true testament to excellence. Renowned for their exceptional
+                                performance, innovative technology, and unmatched reliability, Suzuki bikes offer riders
+                                an unparalleled experience on the road. With a rich history of craftsmanship and a
+                                commitment to pushing the boundaries of design, Suzuki has consistently delivered
+                                motorcycles that stand out in both form and function. When you choose a Suzuki, you're
+                                choosing more than just a bike; you're selecting a legacy of quality and a promise of
+                                adventure that will take you to new horizons.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="images/another_small_blurred.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="salesSection">
+                <div class="container">
+                    <div class="salesContainer">
+                        <div>
+                            <img src="images/pexels-johannes-rampp-13278519.jpg">
+                        </div>
+                        <div class="picDescrptor">
+                            <div class="costAndName">
+                                <p>GSX-R 600</p>
+                                <p>$6500</p>
+                            </div>
+                            <div>
+                                <p class="lastParaSales">
+                                    Unleash the GSX-R 600, a masterpiece of power and agility. This sportbike's 599cc
+                                    engine, combined with its sleek design and advanced technology, offers the ultimate
+                                    thrill-seeking experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="salesContainer">
+                        <div>
+                            <img src="images/pexels-ferdinand-studio-1103995.jpg">
+                        </div>
+                        <div class="picDescrptor">
+                            <div class="costAndName">
+                                <p>GSX-R 600</p>
+                                <p>$7000</p>
+                            </div>
+                            <div>
+                                <p class="lastParaSales">
+                                    Unleash the GSX-R 600 - where power meets precision. With its high-revving 599cc
+                                    engine, sleek design, and advanced tech, it's the ultimate thrill-seeker's choice.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="salesContainer lastSalesDiv">
+                        <div id="positionSwapImg">
+                            <img src="images/pexels-erik-mclean-9827723.jpg">
+                        </div>
+                        <div class="thirdSales" id="positionSwap">
+                            <div class="costAndName">
+                                <p>GSX-R 1000</p>
+                                <p>$10000</p>
+                            </div>
+                            <div>
+                                <p class="lastParaSales">
+                                    Introducing the GSX-R 1000 - the epitome of raw power and precision. With a commanding
+                                    1000cc engine, sleek aesthetics, and cutting-edge technology, this sportbike delivers
+                                    an adrenaline-fueled ride like no other. Experience the pinnacle of speed and style
+                                    with the GSX-R 1000.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <section class="footSection">
+            <div class="footerContainer">
+                <div class="contactSVG">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg>
+                </div>
+                <div>
+                    <h1>Contact us below!</h1>
+                </div>
+                <div class="newsForm">
+                    <input type="email" id="newsEmail" name="newsName" placeholder="USER@DOMAIN.COM">
+                    <input type="submit" value="Notify Me" id="newsSubmit">
+                </div>
+                <div class="footContainer">
+                    <div class="trioSVG">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+                    </div>
+                    <div>
+                        <p>Address</p>
+                    </div>
+                    <div class="horizantalBar"></div>
+                    <div>
+                        <p>1234 Caririon St Victoria BC</p>
+                    </div>
+                </div>
+                <div class="footContainer">
+                    <div class="trioSVG">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                    </div>
+                    <div>
+                        <p>Email</p>
+                    </div>
+                    <div class="horizantalBar"></div>
+                    <div>
+                        <p>support@suzukifake.io</p>
+                    </div>
+                </div>
+                <div class="footContainer">
+                    <div class="trioSVG">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM144 448c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H160c-8.8 0-16 7.2-16 16zM304 64H80V384H304V64z"/></svg>
+                    </div>
+                    <div>
+                        <p>Phone</p>
+                    </div>
+                    <div class="horizantalBar"></div>
+                    <div>
+                        <p>+1 (555) 654-1259</p>
+                    </div>
+                </div>
+                <div class="socialMedia">
+                    <div class="bg-social">
+                        <img src="images/social-media-icons/facebook.png">
+                    </div>
+                    <div class="bg-social leftMargin">
+                        <img src="images/social-media-icons/instagram.png">
+                    </div>
+                    <div class="bg-social leftMargin">
+                        <img src="images/social-media-icons/youtube.png">
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Copyright &copy; SuzukiFake 2023</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+</html>
